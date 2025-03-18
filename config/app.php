@@ -1,18 +1,7 @@
 <?php
 
 return [
-'providers' => [
-    // 他のプロバイダの下に追加
-    App\Providers\RouteServiceProvider::class,
-],
 
-'providers' => [
-    /*
-     * Laravel Framework Service Providers...
-     */
-    Illuminate\Filesystem\FilesystemServiceProvider::class, // ← これがあるか確認
-    App\Providers\RouteServiceProvider::class,
-],
 
     /*
     |--------------------------------------------------------------------------
