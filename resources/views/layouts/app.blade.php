@@ -29,7 +29,16 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @yield('content')
+
+                <!-- 投稿ボタンを特定のページでのみ表示 -->
+                @if (Route::currentRouteName() === 'member')
+                    <div class="fixed bottom-5 right-5 z-50">
+                        <a href="{{ route('upload') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition">
+                            画像を投稿する
+                        </a>
+                    </div>
+                @endif
             </main>
         </div>
     </body>
